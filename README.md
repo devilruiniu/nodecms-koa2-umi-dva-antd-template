@@ -1,6 +1,6 @@
 # nodecms-koa2-umi-dva-antd-template
 一个完整的前后端后台框架解决方案
-### 演示网址：test.91vue.com 账号:admin 密码:123456
+### 演示网址：http://test.91vue.com/ 账号:admin 密码:123456
 ### 接口文档地址：http://apidoc.91vue.com/admin-template/index.html
 
 ## 技术栈
