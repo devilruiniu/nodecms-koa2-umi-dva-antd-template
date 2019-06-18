@@ -1,0 +1,34 @@
+{
+  "Share Sale Admin": {
+    "origin": [
+      [
+        "src/layouts/base/sider/index.js",
+        44
+      ]
+    ]
+  },
+  "Switch Theme": {
+    "origin": [
+      [
+        "src/layouts/base/sider/index.js",
+        67
+      ]
+    ]
+  },
+  "Dark": {
+    "origin": [
+      [
+        "src/layouts/base/sider/index.js",
+        75
+      ]
+    ]
+  },
+  "Light": {
+    "origin": [
+      [
+        "src/layouts/base/sider/index.js",
+        76
+      ]
+    ]
+  }
+}

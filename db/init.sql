@@ -107,7 +107,7 @@ CREATE TABLE `t_lgc_postage_rule` (
 /* 插入账户组数据 */
 insert into t_bas_account_group(name,description) values ("超级管理员","包含所有功能权限");
 /* 插入账户数据 */
-insert into t_bas_account(account_group_id,account,password,name,phone) values (1,"admin","e10adc3949ba59abbe56e057f20f883e","超级管理员","15002071083");
+insert into t_bas_account(account_group_id,account,password,name,phone) values (1,"admin","e10adc3949ba59abbe56e057f20f883e","超级管理员","13011111111");
 /* 插入菜单数据 */
 insert into t_bas_menu(parent_id,name,path,route,icon,level,is_nav_menu) VALUES
 (0,"系统设置","1",NULL,"setting",1,1),

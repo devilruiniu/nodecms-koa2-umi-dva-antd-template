@@ -1,0 +1,50 @@
+{
+  "Share Sale Admin": {
+    "origin": [
+      [
+        "src/pages/login/index.js",
+        59
+      ]
+    ]
+  },
+  "Account is required": {
+    "origin": [
+      [
+        "src/pages/login/index.js",
+        67
+      ]
+    ]
+  },
+  "Account": {
+    "origin": [
+      [
+        "src/pages/login/index.js",
+        71
+      ]
+    ]
+  },
+  "Password is required": {
+    "origin": [
+      [
+        "src/pages/login/index.js",
+        79
+      ]
+    ]
+  },
+  "Password": {
+    "origin": [
+      [
+        "src/pages/login/index.js",
+        86
+      ]
+    ]
+  },
+  "Sign in": {
+    "origin": [
+      [
+        "src/pages/login/index.js",
+        96
+      ]
+    ]
+  }
+}
