@@ -7,10 +7,10 @@ module.exports = {
     },
     // 数据库连接配置
     DATABASE:{
-        HOST: '47.96.182.213',
-        USER: 'guobin',
-        PASSWORD: 'aa123456',
-        DATABASE: 'db_share-sale',
+        HOST: '127.0.0.1',
+        USER: 'root',
+        PASSWORD: '123456',
+        DATABASE: 'db_admin-template',
         CONNECTION_LIMIT: 10
     },
     // 接口地址配置
