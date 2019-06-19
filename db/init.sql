@@ -72,38 +72,6 @@ CREATE TABLE `t_bas_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/* 创建物流邮费模板表`t_lgc_postage_template`,存在的话先删除 */
-DROP TABLE IF EXISTS `t_lgc_postage_template`;
-
-CREATE TABLE `t_lgc_postage_template` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '邮费模板id',
-  `rule_ids` bigint(20) NOT NULL COMMENT '邮费模板规则id，以逗号分隔的字符串',
-  `name` varchar(256) NOT NULL COMMENT '邮费模板中文名称',
-  `meta_created` datetime NOT NULL DEFAULT current_timestamp() COMMENT '创建时间',
-  `meta_modified` datetime NOT NULL DEFAULT current_timestamp() COMMENT '最后一次修改时间',
-  `meta_logic_flag` tinyint(1) NOT NULL DEFAULT 2 COMMENT '逻辑删除标识，默认2（1：是，2：否）',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/* 创建物流邮费规则表`t_lgc_postage_rule`,存在的话先删除 */
-DROP TABLE IF EXISTS `t_lgc_postage_rule`;
-
-CREATE TABLE `t_lgc_postage_rule` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '邮费规则id',
-  `postage_template_id` bigint(20) NOT NULL COMMENT '邮费模板id,一条规则只能对应一个模板',
-  `type` tinyint(1) NOT NULL DEFAULT 1 COMMENT '邮费方式,默认1（1：固定金额，2：按件计费）',
-  `support_delivery` tinyint(1) NOT NULL DEFAULT 1 COMMENT '是否配送,默认1（1：是，2：否）',
-  `logistics_cost` decimal(15,2) NOT NULL DEFAULT 0.00 COMMENT '邮费单价,默认0.00',
-  `logistics_free` tinyint(1) NOT NULL DEFAULT 2 COMMENT '是否满额包邮，默认2（1：是，2：否）',
-  `logistics_free_amount` decimal(15,2) NOT NULL DEFAULT 0.00 COMMENT '包邮金额，默认0.00',
-  `meta_created` datetime NOT NULL DEFAULT current_timestamp() COMMENT '创建时间',
-  `meta_modified` datetime NOT NULL DEFAULT current_timestamp() COMMENT '最后一次修改时间',
-  `meta_logic_flag` tinyint(1) NOT NULL DEFAULT 2 COMMENT '逻辑删除标识，默认2（1：是，2：否）',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
 /* 插入账户组数据 */
 insert into t_bas_account_group(name,description) values ("超级管理员","包含所有功能权限");
 /* 插入账户数据 */
@@ -122,14 +90,12 @@ CREATE TABLE `t_bas_china_city` (
   `id` bigint(20) NOT NULL,
   `name` varchar(40) DEFAULT NULL,
   `parent_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_T_BAS_CHINA_CITY_REFERENCE_T_BAS_CHINA_CITY` (`parent_id`),
-  CONSTRAINT `FK_T_BAS_CHINA_CITY_REFERENCE_T_BAS_CHINA_CITY` FOREIGN KEY (`parent_id`) REFERENCES `t_bas_china_city` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `t_bas_china_city` */
 
-insert  into `t_bas_china_city`(`id`,`name`,`parent_id`) values 
+insert  into `t_bas_china_city`(`id`,`name`,`parent_id`) values
 
 (0,'中国',0),
 
